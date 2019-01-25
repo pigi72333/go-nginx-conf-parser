@@ -116,6 +116,8 @@ ForLoop:
 				buf.WriteRune('\'')
 			case '\\':
 				buf.WriteRune('\\')
+			case '.':
+				buf.WriteRune('.')
 			default:
 				panic(fmt.Errorf("invalid quoted character: '\\%c'", r))
 			}
@@ -159,6 +161,8 @@ ForLoop:
 				buf.WriteRune('\'')
 			case '\\':
 				buf.WriteRune('\\')
+			case '.':
+				buf.WriteRune('.')
 			default:
 				panic(fmt.Errorf("invalid quoted character: '\\%c'", r))
 			}
